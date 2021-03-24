@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<config 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <seo>
+            <configuration>
+                <canonical_tag_enabled>0</canonical_tag_enabled>
+                <prev_next_link_enabled>0</prev_next_link_enabled>
+                <canonical_pagination_enabled>0</canonical_pagination_enabled>
+            </configuration>
+        </seo>
+    </default>
+</config>

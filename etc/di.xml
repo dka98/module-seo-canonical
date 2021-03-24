@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <type name="Lof\Opengraph\Service\TagsCollector">
+        <arguments>
+            <argument name="dataProviders" xsi:type="array">
+                <item name="default" xsi:type="array">
+                    <item name="canonical_url" xsi:type="array">
+                        <item name="class" xsi:type="object">Lof\SeoCanonical\DataProviders\CanonicalUrl</item>
+                        <item name="sortOrder" xsi:type="number">20</item>
+                    </item>
+                </item>
+                <item name="cms" xsi:type="array">
+                    <item name="canonical_url" xsi:type="array">
+                        <item name="class" xsi:type="object">Lof\SeoCanonical\DataProviders\CanonicalUrl</item>
+                        <item name="sortOrder" xsi:type="number">40</item>
+                    </item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+
+    <type name="Magento\Framework\View\Page\Config">
+        <plugin sortOrder="1" name="landofcoderCheckoutRegistrationExtensionConfig" type="Lof\SeoCanonical\Plugin\Framework\View\Page\Config\OverrideProductCanonicalUrl"/>
+    </type>
+
+    <type name="Magento\Catalog\Helper\Category">
+        <plugin name="category_remove_canonical_for_pagination" type="Lof\SeoCanonical\Plugin\Catalog\Helper\Category\RemoveCanonicalForPagination"/>
+    </type>
+
+    <type name="Magento\Theme\Block\Html\Pager">
+        <plugin name="add_prev_and_next_tag_to_registry" type="Lof\SeoCanonical\Plugin\Theme\Block\Html\Pager\AddToPrevAndNextUrlToRegistry"/>
+    </type>
+</config>
+
+
+
+
+
