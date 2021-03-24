@@ -1,7 +1,7 @@
 # Magento 2 Canonical Tag Extension
 
 While Magento 2 does support outputting canonical link meta tag for category and product pages it does not for all the other pages.
-This extension adds an extra setting under **Stores→Configuration→Creativeshop→SEO** tab which lets you enable this feature.
+This extension adds an extra setting under **Stores→Configuration→Landofcoder→SEO** tab which lets you enable this feature.
 
 ## Getting Started
 
@@ -17,10 +17,6 @@ It should also work properly with 2.x.x.
 It is recommended to install this extension using composer package manager:
 
 ```
-composer require landofcoder/seo-canonical-extension
+composer require landofcoder/module-seo-canonical
 ```
-
-## License
-
-This project is licensed under the Open Software License v. 3.0 (OSL-3.0) - see the [LICENSE.md](LICENSE.md) file for details
 
